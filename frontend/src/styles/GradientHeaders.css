@@ -1,0 +1,17 @@
+/* Gradient header text shared across pages */
+
+/* Target section titles and main page headings used across the app */
+.section-title,
+.services-page-container h1,
+.about-container h1,
+.work-container h1,
+.products-container h1,
+.videos-page h1,
+.home-page h1,
+.booking-page h1 {
+  background: linear-gradient(90deg,#2c3e50 0%, #d4a574 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: inherit;
+}

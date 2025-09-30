@@ -1,0 +1,141 @@
+/* TermsAndConditionsPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.terms-page {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  min-height: calc(100vh - 80px);
+}
+
+.terms-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+}
+
+.terms-header {
+  border-bottom: 2px solid #333;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.terms-header h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.terms-intro {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.terms-content {
+  padding: 0;
+}
+
+.terms-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.terms-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.terms-section h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.terms-section p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.terms-section ul {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-left: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.terms-section li {
+  margin-bottom: 0.5rem;
+}
+
+.terms-section li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-details {
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-details strong {
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terms-page {
+    padding: 1rem;
+  }
+
+  .terms-container {
+    padding: 1.5rem;
+  }
+
+  .terms-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .terms-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-container {
+    padding: 1rem;
+  }
+
+  .terms-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .terms-section h2 {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview - Expert Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            
+        }
+
+        .expert-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 6rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expert-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .expert-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .expert-image img {
+            width: 100%;
+            max-width: 350px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            border: 6px solid #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .expert-image::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: -25px;
+            bottom: -25px;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        .expert-content {
+            text-align: left;
+            padding: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .expert-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .expert-title {
+            font-size: 1.2rem;
+            color: #e67e22;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .expert-description {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #e67e22, #d35400);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <section class="expert-section">
+        <div class="expert-container">
+            <div class="expert-image">
+                <img src="src/assets/expert-photo.jpg" alt="Isha Sharma - Vastu & Astrology Expert" />
+            </div>
+            <div class="expert-content">
+                <h2 class="section-title">Meet Your Guide</h2>
+                <h3>Isha Sharma</h3>
+                <p class="expert-title">Certified Vastu Consultant & Astrologer</p>
+                <p class="expert-description">
+                    With over 10 years of dedicated practice in Vastu Shastra and Vedic Astrology, Isha has helped hundreds of families and businesses create harmonious, prosperous environments. Her deep understanding of ancient wisdom combined with a practical modern approach makes her guidance both accessible and transformative.
+                </p>
+                <p class="expert-description">
+                    Isha believes that every space has the potential to support your dreams and aspirations. Through personalized consultations, she helps you unlock the hidden energies in your surroundings to manifest abundance, health, and happiness in your life.
+                </p>
+                <a href="#" class="cta-button">Book an Appointment</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* Shared header styles for section titles across pages */
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  height: 4px;
+  width: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg,#d4a574,#b8956a);
+  transform-origin: left center;
+  animation: expandLine 0.95s cubic-bezier(.2,.9,.2,1) 0.35s forwards;
+}
+
+@keyframes expandLine {
+  from { width: 0; opacity: 0; }
+  to   { width: 100%; opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Stronger specificity to override per-page section-title rules */
+.page-section .section-title,
+.services-page-container .section-title,
+.products-container .section-title,
+.work-container .section-title,
+.about-container .section-title,
+.videos-page .section-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 2.8rem !important;
+  color: #2c3e50 !important;
+  margin-bottom: 2.5rem !important;
+  position: relative !important;
+  display: inline-block !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.4px !important;
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.page-section .section-title::after,
+.services-page-container .section-title::after,
+.products-container .section-title::after,
+.work-container .section-title::after,
+.about-container .section-title::after,
+.videos-page .section-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -12px !important;
+  left: 0 !important;
+  height: 4px !important;
+  width: 0 !important;
+  border-radius: 4px !important;
+  background: linear-gradient(90deg,#d4a574,#b8956a) !important;
+  transform-origin: left center !important;
+  animation: expandLine 0.95s cubic-bezier(.2,.9,.2,1) 0.35s forwards !important;
+}

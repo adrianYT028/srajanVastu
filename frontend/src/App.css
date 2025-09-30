@@ -1,0 +1,50 @@
+/* App.css */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove default Vite styles that interfere with our layout */
+#root > div {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 0;
+  }
+}
+
+/* Remove unused Vite styles */
+.logo {
+  display: none;
+}
+
+.card {
+  display: none;
+}
+
+.read-the-docs {
+  display: none;
+}

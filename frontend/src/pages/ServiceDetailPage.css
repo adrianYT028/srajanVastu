@@ -1,0 +1,321 @@
+/* ServiceDetailPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap');
+
+.service-detail-page {
+  padding: 5rem 1rem;
+  background-color: #fdfbfb;
+  min-height: calc(100vh - 80px);
+}
+
+.service-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-navigation {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #d4a574;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #b8956a;
+}
+
+.service-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.service-header h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.service-intro {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.service-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.service-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.service-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #d4a574, #b8956a);
+  border-radius: 2px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.benefits-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-weight: bold;
+}
+
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: process-counter;
+}
+
+.process-list li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  position: relative;
+  counter-increment: process-counter;
+}
+
+.process-list li::before {
+  content: counter(process-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #d4a574, #b8956a);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Who should avail list styling */
+.who-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.who-list li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.who-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #d4a574, #b8956a);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(212,165,116,0.15);
+}
+
+.pricing-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.pricing-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.pricing-item:hover {
+  border-color: #d4a574;
+}
+
+.pricing-item h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #d4a574;
+  margin-bottom: 0.5rem;
+}
+
+.price-description {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.service-cta {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(74, 144, 226, 0.2);
+}
+
+.service-cta h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-cta p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #357abd;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-detail-page {
+    padding: 3rem 1rem;
+  }
+
+  .service-header h1 {
+    font-size: 2rem;
+  }
+
+  .service-intro {
+    font-size: 1rem;
+  }
+
+  .service-section {
+    padding: 1.5rem;
+  }
+
+  .service-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .pricing-info {
+    grid-template-columns: 1fr;
+  }
+
+  .service-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-cta h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-detail-page {
+    padding: 2rem 1rem;
+  }
+
+  .service-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .service-section {
+    padding: 1rem;
+  }
+
+  .service-cta {
+    padding: 1.5rem 1rem;
+  }
+
+  .service-cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
