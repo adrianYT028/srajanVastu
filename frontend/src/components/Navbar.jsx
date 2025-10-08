@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import CartIcon from './CartIcon';
+import logo from '../assets/03.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-brand" onClick={closeMenu}>SRAJAN VASTU</Link>
+        <Link to="/" className="navbar-brand" onClick={closeMenu}>
+          <img src={logo} alt="Srajan Vastu" className="navbar-logo" />
+        </Link>
         <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
           <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>

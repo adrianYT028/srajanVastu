@@ -14,24 +14,49 @@ const CartPage = () => {
   }, 0);
 
   const sendWhatsApp = () => {
-    const phone = '+91 84481 69911'; // replace with your number
-    let message = `New order from SRAJAN VASTU (%20)\n`;
-    items.forEach(it => {
-      message += `${it.name} - Qty: ${it.quantity} - Price: ${it.price}\n`;
+    if (items.length === 0) {
+      alert('Your cart is empty! Please add some items before placing an order.');
+      return;
+    }
+
+    const phone = '919650786531'; // Correct phone number from your site
+    
+    let message = `🛒 New Order for SRAJAN VASTU\n\n`;
+    message += `📋 Order Details:\n`;
+    message += `${'-'.repeat(30)}\n`;
+    
+    items.forEach((item, index) => {
+      message += `${index + 1}. ${item.name}\n`;
+      message += `   Price: ${item.price}\n`;
+      message += `   Quantity: ${item.quantity}\n\n`;
     });
-    message += `Total: ₹${total}`;
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank'); 
+    
+    message += `${'-'.repeat(30)}\n\n`;
+    message += `📱 Please confirm this order and provide payment details.`;
+
+    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+    
+    // Show confirmation before sending
+    const confirmed = window.confirm(
+      `Send order details to WhatsApp?\n\nItems: ${items.length}\n\nThis will open WhatsApp with your order details.`
+    );
+    
+    if (confirmed) {
+      window.open(url, '_blank');
+      
+      // Optional: Clear cart after successful send (you can remove this if you don't want to clear)
+      setTimeout(() => {
+        const shouldClear = window.confirm('Order sent successfully! Would you like to clear your cart?');
+        if (shouldClear) {
+          dispatch({ type: 'CLEAR_CART' });
+        }
+      }, 1000);
+    }
   };
 
   return (
     <div className="cart-page">
       <div className="cart-container">
-        <div className="coming-soon-banner">
-          <div className="coming-soon-icon">🚧</div>
-          <h2>WE WILL BE BACK WITH THIS FEATURE SOON</h2>
-          <p>Our e-commerce functionality is under development. Stay tuned for an amazing shopping experience!</p>
-        </div>
         <h1 className="section-title">Your Cart</h1>
         {items.length === 0 ? (
           <div className="empty-cart">
@@ -95,10 +120,22 @@ const CartPage = () => {
               ))}
             </ul>
             <div className="cart-summary">
-              <div>Total: <strong>₹{total}</strong></div>
+              <div className="total-display">
+                <span className="total-label">Total:</span>
+                <strong className="total-amount">₹{total.toLocaleString()}</strong>
+              </div>
               <div className="cart-actions">
-                <button className="btn" onClick={() => dispatch({ type: 'CLEAR_CART' })}>Clear Cart</button>
-                <button className="btn primary" onClick={sendWhatsApp}>Send via WhatsApp</button>
+                <button className="btn secondary" onClick={() => dispatch({ type: 'CLEAR_CART' })}>
+                  Clear Cart
+                </button>
+                <button 
+                  className="btn primary whatsapp-btn" 
+                  onClick={sendWhatsApp}
+                  disabled={items.length === 0}
+                >
+                  <i className="fab fa-whatsapp"></i>
+                  Send via WhatsApp
+                </button>
               </div>
             </div>
           </div>

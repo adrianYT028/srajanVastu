@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
 import expertPhoto from '../assets/WhatsApp Image 2025-09-15 at 01.42.19_a80530b0.jpg';
+import rudrakshaImg from '../assets/7-mukhi-rudraksha.jpg';
+import tigerEyeImg from '../assets/tiger-eye-bracelet.jpg';
+import shriYantraImg from '../assets/shri-yantra-brass.jpg';
 
 const HomePage = () => {
   
@@ -19,10 +22,11 @@ const HomePage = () => {
           <span className="constant-text">SRAJAN</span>
           <span className="constant-text">VASTU</span>
         </h1>
-        <p className="hero-services">{heroTexts[0]}</p>
+        <p className="hero-tagline">Energy. Wisdom. Harmony.</p>
         <div className="button-group">
-          <Link to="/booking" className="cta-button">Book Consultation</Link>
-          <Link to="/products" className="secondary-button">View Products</Link>
+          <Link to="/services" className="cta-button">Explore Services</Link>
+          <Link to="/products" className="secondary-button">Explore Products</Link>
+          <Link to="/booking" className="tertiary-button">Book Consultation</Link>
         </div>
       </section>
 
@@ -80,21 +84,54 @@ Astrology Consultation</h3>
       <section className="page-section light-bg">
         <h2 className="section-title">Featured Products</h2>
         <div className="grid-container">
-          <div className="info-card" style={{"--animation-delay": "0.1s"}}>
-            <div className="image-placeholder">Image</div>
-            <h3>Healing Crystals</h3>
-            <p>Authentic crystals to amplify positive energy and bring harmony to your home.</p>
-          </div>
-          <div className="info-card" style={{"--animation-delay": "0.3s"}}>
-            <div className="image-placeholder">Image</div>
-            <h3>Vastu Yantras</h3>
-            <p>Powerful yantras to correct energetic imbalances and protect your space.</p>
-          </div>
-          <div className="info-card" style={{"--animation-delay": "0.5s"}}>
-            <div className="image-placeholder">Image</div>
-            <h3>Rudraksha Beads</h3>
-            <p>Sacred Rudraksha beads for protection, focus, and spiritual well-being.</p>
-          </div>
+          <Link to="/products" className="info-card clickable-card" style={{"--animation-delay": "0.1s"}}>
+            <div className="product-image-placeholder">
+              <img 
+                src={rudrakshaImg} 
+                alt="7 Mukhi Rudraksha"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'block';
+                }}
+              />
+              <div className="placeholder-text" style={{display: 'none'}}>Product Image</div>
+            </div>
+            <h3>7 Mukhi Rudraksha</h3>
+            <p>Associated with Goddess Lakshmi, attracts wealth and prosperity. Wear as pendant after purification rituals.</p>
+          </Link>
+          <Link to="/products" className="info-card clickable-card" style={{"--animation-delay": "0.3s"}}>
+            <div className="product-image-placeholder">
+              <img 
+                src={tigerEyeImg} 
+                alt="Tiger Eye Bracelet"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'block';
+                }}
+              />
+              <div className="placeholder-text" style={{display: 'none'}}>Product Image</div>
+            </div>
+            <h3>Tiger Eye Bracelet</h3>
+            <p>Protects from negativity and boosts confidence. Wear on right hand wrist after purification.</p>
+          </Link>
+          <Link to="/products" className="info-card clickable-card" style={{"--animation-delay": "0.5s"}}>
+            <div className="product-image-placeholder">
+              <img 
+                src={shriYantraImg} 
+                alt="Shri Yantra Brass"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'block';
+                }}
+              />
+              <div className="placeholder-text" style={{display: 'none'}}>Product Image</div>
+            </div>
+            <h3>Shri Yantra (Brass)</h3>
+            <p>Brings prosperity, wealth, and success in business & life. Place in North-East and energize with daily puja.</p>
+          </Link>
+        </div>
+        <div className="products-cta">
+          <Link to="/products" className="cta-button">View All Products</Link>
         </div>
       </section>
     </div>

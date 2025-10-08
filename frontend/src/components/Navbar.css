@@ -2,7 +2,7 @@
 .navbar {
     background-color: #FDFDFD;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -21,6 +21,19 @@
     font-weight: bold;
     color: #333;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-menu {
@@ -94,6 +107,11 @@
         font-size: 1.3rem;
     }
     
+    .navbar-logo {
+        height: 90px;
+        margin: -12px 0 -20px 0;
+    }
+    
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -140,6 +158,11 @@
     
     .navbar-brand {
         font-size: 1.1rem;
+    }
+    
+    .navbar-logo {
+        height: 70px;
+        margin: -8px 0 -15px 0;
     }
     
     .nav-menu {

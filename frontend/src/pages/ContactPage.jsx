@@ -35,7 +35,7 @@ const ContactPage = () => {
     const whatsappMessage = `Hi! New inquiry from ${formData.name}. Email: ${formData.email}. Subject: ${formData.subject}. Message: ${formData.message}`;
 
     // WhatsApp phone number
-    const phoneNumber = '919810681928'; // Added country code
+    const phoneNumber = '919650786531'; // Added country code
     
     // Create WhatsApp URL - try different format
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
@@ -78,13 +78,13 @@ const ContactPage = () => {
           </div>
           <div className="info-item">
             <FaPhone />
-            <span>+91 9810681928</span>
+            <span>+91 9650786531</span>
           </div>
           <div className="social-links">
-            <a href="https://www.facebook.com/xpertvaastu">
+            <a href="https://www.facebook.com/srajanvastu">
               <FaFacebook />
             </a>
-            <a href="https://www.instagram.com/seemasharma7718/">
+            <a href="https://www.instagram.com/srajanvastu">
               <FaInstagram />
             </a>
             <a href="https://www.youtube.com/channel/UCfOsKLhjwFmHiVhfcQ6NgwQ">

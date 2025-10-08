@@ -46,13 +46,13 @@ const Footer = () => {
               Transform your living and working spaces into centers of positive energy and prosperity. Our certified Vastu consultants combine ancient wisdom with practical solutions to create harmonious environments that support your health, relationships, and business success across Delhi NCR.
             </p>
             <div className="footer-social">
-              <a href="https://www.facebook.com/xpertvaastu" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/srajanvastu" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://www.instagram.com/seemasharma7718/" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/srajanvastu" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://wa.me/919810681928" className="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919650786531" className="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-whatsapp"></i>
               </a>
               <a href="mailto:srajanvastu@gmail.com" className="social-link" aria-label="Email">
@@ -95,7 +95,7 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <i className="fas fa-phone"></i>
-                <span>+91 9810681928</span>
+                <span>+91 9650786531</span>
               </div>
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>
