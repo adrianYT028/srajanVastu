@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './ServicesPage.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ServicesPage = () => {
   const location = useLocation();
@@ -27,7 +30,34 @@ const ServicesPage = () => {
 
   return (
     <div className="services-page">
+      {/* SEO Meta Tags */}
+      <SEO 
+        title="Vastu, Numerology & Astrology Services - Professional Consultation by Seema Sharma"
+        description="Comprehensive Vastu Shastra, Numerology, and Astrology consultation services. Residential & Commercial Vastu, Personal Numerology, Name Correction, Horoscope Analysis, Career Guidance, Marriage Compatibility and more. Expert guidance by certified consultant Seema Sharma."
+        keywords="vastu consultation services, numerology services, astrology consultation, residential vastu, commercial vastu, personal numerology, name correction, horoscope analysis, marriage compatibility, career guidance, vastu expert"
+        canonical="https://www.srajanvastu.com/services"
+      />
+      
+      {/* Structured Data */}
+      <StructuredData 
+        type="services" 
+        customData={{
+          breadcrumbs: [
+            { name: 'Home', url: 'https://www.srajanvastu.com/' },
+            { name: 'Services', url: 'https://www.srajanvastu.com/services' }
+          ]
+        }}
+      />
+      
       <div className="services-page-container">
+        {/* Breadcrumbs */}
+        <Breadcrumbs 
+          items={[
+            { name: 'Home', path: '/' },
+            { name: 'Services' }
+          ]}
+        />
+        
         <h1>Our Services</h1>
         
         {/* Vastu Consultation Section */}

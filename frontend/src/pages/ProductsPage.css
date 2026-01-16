@@ -14,15 +14,30 @@
 }
 
 .page-title {
-  font-family: 'Crimson Text', serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #2c3e50;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #e67e22, #d35400);
+  color: #1f2d3d;
+  letter-spacing: 0.6px;
+  background: linear-gradient(90deg, #2c3e50 0%, #d4a574 60%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #d4a574, #b8956a);
+  transform-origin: center;
 }
 
 .page-subtitle {

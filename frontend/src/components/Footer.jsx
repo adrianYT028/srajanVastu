@@ -52,6 +52,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/srajanvastu" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram"></i>
               </a>
+              <a href="https://www.youtube.com/channel/UCfOsKLhjwFmHiVhfcQ6NgwQ" className="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-youtube"></i>
+              </a>
               <a href="https://wa.me/919650786531" className="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-whatsapp"></i>
               </a>
@@ -95,7 +98,7 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <i className="fas fa-phone"></i>
-                <span>+91 9650786531</span>
+                <span>+91 9650786531, +91 9810681928</span>
               </div>
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>

@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import './BookingPage.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const BookingPage = () => {
   const googleFormUrl = 'https://forms.gle/yZesqruDwqSfRCgw9';
@@ -19,6 +22,29 @@ const BookingPage = () => {
 
   return (
     <div className="booking-page">
+      <SEO 
+        title="Book Consultation - Schedule Your Vastu, Numerology & Astrology Session"
+        description="Book your professional consultation with certified expert Seema Sharma. Get personalized Vastu Shastra, Numerology, and Astrology guidance. Easy online booking for residential vastu, commercial vastu, personal numerology, horoscope analysis and more."
+        keywords="book vastu consultation, schedule vastu appointment, numerology consultation booking, astrology session booking, vastu consultant appointment"
+        canonical="https://www.srajanvastu.com/booking"
+      />
+      <StructuredData 
+        type="booking" 
+        customData={{
+          breadcrumbs: [
+            { name: 'Home', url: 'https://www.srajanvastu.com/' },
+            { name: 'Booking', url: 'https://www.srajanvastu.com/booking' }
+          ]
+        }}
+      />
+      
+      <Breadcrumbs 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Book Consultation' }
+        ]}
+      />
+      
       <div className="booking-container">
         <div className="redirect-content">
           <h1>Book an Appointment</h1>

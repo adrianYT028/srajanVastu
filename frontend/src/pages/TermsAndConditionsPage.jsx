@@ -93,7 +93,7 @@ const TermsAndConditionsPage = () => {
             <p>For concerns or complaints, please contact:</p>
             <div className="contact-details">
               <p><strong>Mrs. Seema Sharma</strong></p>
-              <p>📞 +91 9650786531 (12:00 PM – 05:00 PM IST)</p>
+              <p>📞 +91 9650786531, +91 9810681928 (12:00 PM – 05:00 PM IST)</p>
               <p>📧 connect@srajanvastu.com</p>
             </div>
             <p>We aim to address all genuine concerns within 7 working days.</p>

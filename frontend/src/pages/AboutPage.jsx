@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './AboutPage.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const AboutPage = () => {
   const [currentText, setCurrentText] = useState(0);
@@ -25,6 +28,29 @@ const AboutPage = () => {
 
   return (
     <div className="about-page">
+      <SEO 
+        title="About Srajan Vastu - Meet Expert Vastu Consultant Seema Sharma"
+        description="Learn about Srajan Vastu and certified expert Seema Sharma. Discover our professional Vastu Shastra, Numerology, and Astrology consultation services backed by years of experience and proven results."
+        keywords="about vastu consultant, seema sharma vastu expert, certified vastu consultant, vastu shastra expert, numerology expert, astrology expert, professional vastu consultant"
+        canonical="https://www.srajanvastu.com/about"
+      />
+      <StructuredData 
+        type="about" 
+        customData={{
+          breadcrumbs: [
+            { name: 'Home', url: 'https://www.srajanvastu.com/' },
+            { name: 'About', url: 'https://www.srajanvastu.com/about' }
+          ]
+        }}
+      />
+      
+      <Breadcrumbs 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'About' }
+        ]}
+      />
+      
       <div className="about-container">
         {/* Hero Section */}
         <div className="hero-section">

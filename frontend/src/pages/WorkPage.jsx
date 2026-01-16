@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './WorkPage.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 // Import the new images properly
 import mahaVastu1 from '../assets/WhatsApp Image 2025-09-01 at 21.25.47_a295c0db.jpg';
@@ -59,6 +62,29 @@ const WorkPage = () => {
   }, [geoVastuImages.length]);
   return (
     <div className="work-page">
+      <SEO 
+        title="Our Work - Vastu, Numerology & Astrology Portfolio | Srajan Vastu"
+        description="View our successful Vastu consultations, astrological readings, and energy healing projects. See real transformations through our Maha Vastu, GeoVastu, and numerology services."
+        keywords="vastu portfolio, vastu projects, numerology case studies, astrology consultations, successful vastu transformations"
+        canonical="https://www.srajanvastu.com/work"
+      />
+      <StructuredData 
+        type="work" 
+        customData={{
+          breadcrumbs: [
+            { name: 'Home', url: 'https://www.srajanvastu.com/' },
+            { name: 'Our Work', url: 'https://www.srajanvastu.com/work' }
+          ]
+        }}
+      />
+      
+      <Breadcrumbs 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Our Work' }
+        ]}
+      />
+      
       <div className="work-container">
         <h1 className="section-title">Our Portfolio</h1>
         <p className="subtitle">Explore a selection of our successful Vastu consultations, astrological chart readings, and energy healing projects.</p>

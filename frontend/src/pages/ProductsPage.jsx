@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useCart, useCartDispatch } from '../context/CartContext';
 import './ProductsPage.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ProductsPage = () => {
   const cart = useCart();
@@ -453,6 +456,29 @@ Thank you!`;
 
   return (
     <div className="products-page">
+      <SEO 
+        title="Spiritual Products - Authentic Rudraksha, Crystals, Yantras & Sacred Items"
+        description="Shop authentic spiritual products at Srajan Vastu. Genuine Rudraksha beads, healing crystals, sacred yantras, energized bracelets, and spiritual items for prosperity, protection, and positive energy. Expert guidance included with every purchase."
+        keywords="spiritual products, rudraksha beads, healing crystals, sacred yantra, tiger eye bracelet, shri yantra, energized crystals, spiritual items online, vastu products, authentic rudraksha"
+        canonical="https://www.srajanvastu.com/products"
+      />
+      <StructuredData 
+        type="products" 
+        customData={{
+          breadcrumbs: [
+            { name: 'Home', url: 'https://www.srajanvastu.com/' },
+            { name: 'Products', url: 'https://www.srajanvastu.com/products' }
+          ]
+        }}
+      />
+      
+      <Breadcrumbs 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Products' }
+        ]}
+      />
+      
       <div className="products-header">
         <h1 className="page-title">Sacred Products</h1>
         <p className="page-subtitle">Authentic spiritual items for your journey</p>

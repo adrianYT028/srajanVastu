@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './VideosPage.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const VideosPage = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
@@ -78,7 +81,7 @@ const VideosPage = () => {
         donts: 'Don\'ts – What to Avoid at the Entrance\n\nAvoid broken or cracked doors.\nNo shoe rack directly in front of the main door.\nNo mirror facing the entrance (it pushes energy out).\nAvoid clutter, dustbins, or bathrooms near the entrance.',
         remedies: 'Vastu Remedies Without Renovation\n\nIf your entrance direction or setup isn\'t ideal, don\'t worry! Some quick remedies:\n\nUse Vastu pyramids near the main door.\nHang a crystal ball for energy balance.\nPlace plants like tulsi or money plant at the entry for good vibes.',
         conclusion: 'Final Thoughts\n\nYour home entrance is the gateway of fortune. With simple Vastu adjustments, you can create a welcoming space that radiates positivity and prosperity.\nAt SrajanVastu, we specialize in residential & commercial Vastu consultations – guiding you with customized remedies for your home or office.',
-        cta: 'Call to Action\n\nReady to transform your home with personalized Vastu guidance?\n Book your consultation with SrajanVastu – Gurgaon\'s trusted Vastu experts today.\nContact: +91-9650786531 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
+        cta: 'Call to Action\n\nReady to transform your home with personalized Vastu guidance?\n Book your consultation with SrajanVastu – Gurgaon\'s trusted Vastu experts today.\nContact: +91-9650786531 / +91-9810681928 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
       },
       readTime: '5 min read',
       publishDate: 'September 16, 2025'
@@ -97,7 +100,7 @@ const VideosPage = () => {
         consultation: 'What Happens During a Vastu Consultation?\n\nWhen you book a Vastu consultancy with SrajanVastu, we provide:\nOn-site or Online Analysis of your property.\nStudy of entrance, layout, rooms, and surroundings.\nIdentification of Vastu doshas (imbalances).\nPractical Remedies (like placements, colors, crystals, yantras) – without demolition.\nPersonalized guidance tailored to your family\'s needs.',
         need: 'Do You Really Need Vastu Consultancy?\n\nMany people think Vastu is just for new homes or construction. That\'s not true.\nAlready living in a flat or rented home? Remedies still work.\nPlanning a new house? Start with Vastu to build it right.\nFacing challenges in health, finances, or relationships? Vastu analysis often reveals the root cause.',
         conclusion: 'Final Thoughts\n\nYour home is not just a shelter – it\'s a living energy field. With the right Vastu alignment, you can experience peace, prosperity, and progress in every aspect of life.\nAt SrajanVastu, we combine traditional wisdom with modern practicality, offering solutions that are simple, effective, and result-oriented.',
-        cta: 'Call to Action\n\nReady to bring harmony and prosperity into your life?\n Book your Vastu Analysis & Consultation with SrajanVastu today.\nContact: +91-9650786531 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
+        cta: 'Call to Action\n\nReady to bring harmony and prosperity into your life?\n Book your Vastu Analysis & Consultation with SrajanVastu today.\nContact: +91-9650786531 / +91-9810681928 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
       },
       readTime: '6 min read',
       publishDate: 'September 15, 2025'
@@ -115,7 +118,7 @@ const VideosPage = () => {
         office: 'Vastu Tips for Offices\n\nHere are some proven guidelines for offices:\n\nOwner\'s Cabin:\nShould be in the South-West direction.\nSit facing North or East for better decision-making.\n\nReception Area:\nPlace in North-East for attracting positivity and clients.\nKeep it well-lit and welcoming.\n\nEmployee Seating:\nStaff should face North or East while working.\nAvoid sitting under beams – it causes stress.\n\nCash & Finance Department:\nPlace in North or North-East direction.\nKeep lockers/safes against the South wall, opening towards North.',
         retail: 'Vastu Tips for Shops & Retail\n\nEntrance:\nNorth-East entrance is most auspicious for attracting customers.\nAvoid South-West entry points.\n\nCash Counter:\nPlace on the North side, opening towards the East.\n\nDisplay Items:\nPlace attractive or best-selling products near the entrance to draw attention.\n\nLighting & Decor:\nBright and clutter-free shops invite positive buying energy.',
         benefits: 'Benefits of Business Vastu Consultation\n\nIncreased sales & revenue\nBetter employee productivity\nEnhanced brand reputation\nImproved client trust & repeat business\nOverall growth & stability',
-        cta: 'Call to Action\n\nWant to boost your business with Vastu?\n Book your Business Vastu Consultation with SrajanVastu today.\nContact: +91-9650786531 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
+        cta: 'Call to Action\n\nWant to boost your business with Vastu?\n Book your Business Vastu Consultation with SrajanVastu today.\nContact: +91-9650786531 / +91-9810681928 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
       },
       readTime: '7 min read',
       publishDate: 'September 14, 2025'
@@ -133,7 +136,7 @@ const VideosPage = () => {
         declutter: 'Declutter Your Space, Declutter Your Mind\n\nRemove all unwanted, unused, broken, or rusted clutter from your home.\nKeep the north-east corner of every room clean and tidy to maintain fresh energy flow.\nEnsure that the central space of the house remains open, clean, and uncluttered for stress-free living.',
         bedroom: 'Bedroom Vastu for Peaceful Sleep\n\nAvoid mirrors in the bedroom; if present, cover them at night.\nSleep with your head towards the south for the best results; east is also favorable.\nPlace the bed slightly away from the wall, with a proper headrest.\nAvoid bed boxes as they restrict energy flow. If you must use one, never store items emitting negative energy.\nBe mindful of geopathic stress lines beneath your bed—these can cause serious long-term health issues.\nUse clean white linen at night for purity and calmness.\nDiffuse soft music and soothing aromas in your bedroom for restful sleep.',
         conclusion: 'Final Thoughts\n\nIn my years of practice, I have witnessed families regain harmony, children improve their focus, and individuals find peace—all by embracing these simple Vastu tips. You don\'t need massive changes or expensive remedies; sometimes, it\'s the smallest shifts that bring the biggest transformation.\n\nAt Srajan Vastu, our guiding philosophy is simple yet profound:\n"सर्वे भवन्तु सुखिनः – May all be happy."\n\nMy humble invitation to you: start with one or two of these practices today, and you will begin to feel the difference—lighter, calmer, and more connected with yourself and your space.',
-        cta: 'Call to Action\n\nReady to bring harmony and prosperity into your life?\n Book your Vastu Analysis & Consultation with SrajanVastu today.\nContact: +91-9650786531 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
+        cta: 'Call to Action\n\nReady to bring harmony and prosperity into your life?\n Book your Vastu Analysis & Consultation with SrajanVastu today.\nContact: +91-9650786531 / +91-9810681928 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
       },
       readTime: '8 min read',
       publishDate: 'September 13, 2025'
@@ -151,7 +154,7 @@ const VideosPage = () => {
         ancient: 'प्राचीन काल में वास्तु शास्त्र\n\nप्राचीन समय में Vastu Shastra केवल राजाओं और उच्च वर्ग तक सीमित था। उस दौर में वास्तु के नियम दो तरह से अपनाए जाते थे:\n- राजपरिवारों के लिए विशेष नियम\n- आम जनता के लिए नियम',
         daily: 'आम जीवन में वास्तु टिप्स (Vastu Tips for Home)\n\n- शयनकक्ष (Bedroom): दक्षिण-पश्चिम दिशा में बनाया जाता था। यह दिशा स्थिरता और कार्यकुशलता बढ़ाने वाली मानी जाती है।\n- रसोईघर (Kitchen): दक्षिण-पूर्व दिशा में बनाया जाता था। यह दिशा परिश्रम और कर्मशीलता के लिए प्रेरित करती है।\n\nआज भी ये Vastu Tips घर को संतुलित करने और परिवार में शांति व समृद्धि लाने के लिए अपनाए जाते हैं.',
         celebration: 'जीवन है एक उत्सव\n\nजीवन वास्तव में एक उत्सव है। यदि आप इस उत्सव का आनंद नहीं ले पा रहे हैं, तो संभव है कि आपके घर या ऑफिस में वास्तु दोष (Vastu Dosh) मौजूद हो।\n- यह दोष आपके मन, स्वास्थ्य और जीवन में बाधाएँ पैदा कर सकता है।\n- ऐसे समय में Vastu Shastra Tips और सही Vastu Consultation आपके वातावरण को संतुलित कर, जीवन को सकारात्मक और ऊर्जावान बना सकते हैं.',
-        cta: 'संपर्क करें (Call to Action)\n\nक्या आप अपने जीवन में संतुलन और समृद्धि लाना चाहते हैं?\nआज ही सृजन वास्तु से अपना वास्तु विश्लेषण और परामर्श बुक करें।\nसंपर्क: +91-9650786531 | srajanvastu@gmail.com\nवेबसाइट देखें: srajanvastu.com'
+        cta: 'संपर्क करें (Call to Action)\n\nक्या आप अपने जीवन में संतुलन और समृद्धि लाना चाहते हैं?\nआज ही सृजन वास्तु से अपना वास्तु विश्लेषण और परामर्श बुक करें।\nसंपर्क: +91-9650786531 / +91-9810681928 | srajanvastu@gmail.com\nवेबसाइट देखें: srajanvastu.com'
       },
       readTime: '6 min read',
       publishDate: 'September 12, 2025'
@@ -169,7 +172,7 @@ const VideosPage = () => {
         calculation: 'How to Calculate Your Life Path Number\n\nStep 1: Write down your full birth date (MM/DD/YYYY)\nStep 2: Add all the digits together\nStep 3: Keep adding until you get a single digit (1-9) or master numbers (11, 22, 33)\n\nExample: Born on March 15, 1990\n3 + 1 + 5 + 1 + 9 + 9 + 0 = 28\n2 + 8 = 10\n1 + 0 = 1\nLife Path Number = 1',
         meanings: 'Life Path Number Meanings\n\nLife Path 1: The Leader - Independent, pioneering, ambitious\nLife Path 2: The Peacemaker - Cooperative, diplomatic, sensitive\nLife Path 3: The Creative - Artistic, expressive, optimistic\nLife Path 4: The Builder - Practical, hardworking, reliable\nLife Path 5: The Explorer - Adventurous, freedom-loving, dynamic\nLife Path 6: The Nurturer - Caring, responsible, family-oriented\nLife Path 7: The Seeker - Spiritual, analytical, introspective\nLife Path 8: The Achiever - Ambitious, material success, power\nLife Path 9: The Humanitarian - Compassionate, generous, wise',
         master: 'Master Numbers\n\nLife Path 11: The Intuitive - Highly spiritual, inspirational\nLife Path 22: The Master Builder - Practical visionary, great potential\nLife Path 33: The Master Teacher - Spiritual teacher, healer',
-        cta: 'Personal Numerology Consultation\n\nWant a detailed numerology reading?\n Book your personal consultation with SrajanVastu today.\nContact: +91-9650786531 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
+        cta: 'Personal Numerology Consultation\n\nWant a detailed numerology reading?\n Book your personal consultation with SrajanVastu today.\nContact: +91-9650786531 / +91-9810681928 | srajanvastu@gmail.com\n Visit: srajanvastu.com'
       },
       readTime: '9 min read',
       publishDate: 'September 11, 2025'
@@ -182,6 +185,29 @@ const VideosPage = () => {
 
   return (
     <div className="videos-page">
+      <SEO 
+        title="Videos & Blogs - Vastu Tips, Numerology Insights & Astrology Guidance"
+        description="Watch educational videos and read insightful blogs about Vastu Shastra, Numerology, and Astrology by expert consultant Seema Sharma. Get free tips and spiritual guidance."
+        keywords="vastu videos, numerology blogs, astrology insights, vastu tips, spiritual guidance, vastu consultant videos"
+        canonical="https://www.srajanvastu.com/videos"
+      />
+      <StructuredData 
+        type="videos" 
+        customData={{
+          breadcrumbs: [
+            { name: 'Home', url: 'https://www.srajanvastu.com/' },
+            { name: 'Videos & Blogs', url: 'https://www.srajanvastu.com/videos' }
+          ]
+        }}
+      />
+      
+      <Breadcrumbs 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Videos & Blogs' }
+        ]}
+      />
+      
       <div className="videos-container">
         {/* Hero Section */}
         <div className="hero-section">

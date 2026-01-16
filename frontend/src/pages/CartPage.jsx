@@ -73,14 +73,13 @@ const CartPage = () => {
               <div className="featured-list">
                 {/* quick add suggestions */}
                 {[
-                  { id: 4, name: 'Shree Yantra', price: '₹2,500' },
-                  { id: 1, name: 'Rose Quartz Crystal', price: '₹1,800' },
-                  { id: 6, name: 'Vastu Pyramid', price: '₹2,200' },
+                  { id: 4, name: 'Shree Yantra', price: 'Contact for Best Offer' },
+                  { id: 1, name: 'Rose Quartz Crystal', price: 'Contact for Best Offer' },
+                  { id: 6, name: 'Vastu Pyramid', price: 'Contact for Best Offer' },
                 ].map(p => (
                   <div key={p.id} className="featured-card">
                     <div className="featured-info">
                       <strong>{p.name}</strong>
-                      <div className="price">{p.price}</div>
                     </div>
                     <div>
                       <button className="btn small" onClick={() => dispatch({ type: 'ADD_ITEM', payload: { ...p, quantity: 1 } })}>Add</button>
